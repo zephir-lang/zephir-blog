@@ -2,7 +2,7 @@
 title: About
 subtitle: Zephir Language Blog
 description: The blog for Zephir Language, showcasing news, code snippets, new functionality and more.
-featured_image: /zephir-blog/images/logo.jpg
+featured_image: /images/logo.jpg
 ---
 
 Welcome to Zephir, an open source, high-level/domain specific language designed to ease the creation and maintainability of extensions for PHP, with a focus on type and memory safety.
