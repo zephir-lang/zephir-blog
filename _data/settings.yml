@@ -4,7 +4,7 @@ basic_settings:
   favicon_image: /images/favicon.png
   site_description: 'The official blog of Zephir Language'
   site_keywords: 'php, phalcon, zephir, language, php modules'
-  site_baseurl: '/'
+  site_baseurl: 
 
 header_settings:
   logo_image: 
