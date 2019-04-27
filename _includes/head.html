@@ -1,7 +1,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
         <meta name="author" content="{{ site.app.author }}">
         <meta name="generator" content="">
         <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
@@ -79,28 +80,32 @@
         <meta name="msapplication-square310x310logo"
           content="https://assets.phalconphp.com/zephir/icons/mstile-310x310.png">
 
-        <link href='https://fonts.googleapis.com/css?family=Merriweather'
-              rel='stylesheet'
-              type='text/css'>
-        <link rel="stylesheet"
-              href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-              integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-              crossorigin="anonymous">
-        <link rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-              crossorigin="anonymous">
-        <link rel="stylesheet"
-              type="text/css"
-              href="/assets/css/darcula.css?v{{ site.time | date: '%s%N' }}">
-        <link rel="stylesheet"
-              href="/assets/css/docs.css?v{{ site.time | date: '%s%N' }}">
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ site.data.settings.basic_settings.site_baseurl }}/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/g/highlight.js@9.11.0(styles/monokai-sublime.min.css)" />
 
-        <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+        <!-- Icons -->
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
 
-            {% if site.data.settings.advanced_settings.analytics_code %}
-            <!-- Analytics Code -->
-            {{ site.data.settings.advanced_settings.analytics_code }}
-            {% endif %}
+        {% if site.data.settings.advanced_settings.custom_styles %}
+        <!-- Custom Styles -->
+        <style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
+        {% endif %}
+
+        {% if site.data.settings.advanced_settings.analytics_code %}
+        <!-- Analytics Code -->
+        {{ site.data.settings.advanced_settings.analytics_code }}
+        {% endif %}
+      {% if site.data.settings.font_settings.font_embed %}
+      <!-- Font Embed Code -->
+      {{ site.data.settings.font_settings.font_embed }}
+      {% endif %}
+
+
+      {% if site.data.settings.advanced_settings.header_js %}
+      <!-- Extra Header JS Code -->
+      {{ site.data.settings.advanced_settings.header_js }}
+      {% endif %}
     </head>
