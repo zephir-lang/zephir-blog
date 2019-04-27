@@ -99,5 +99,8 @@
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
 
-        {% include analytics.html %}
+            {% if site.data.settings.advanced_settings.analytics_code %}
+            <!-- Analytics Code -->
+            {{ site.data.settings.advanced_settings.analytics_code }}
+            {% endif %}
     </head>
