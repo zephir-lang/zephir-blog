@@ -4,36 +4,25 @@
 
 <head>
 
-
-	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-	{{ site.data.settings.basic_settings.site_title }}
-
-	Journal Theme by https://jekyllthemes.io
-	Premium + free Jekyll themes for your blog or website.
-
-	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<!-- Page Info -->
-	<link rel="shortcut icon" href="{{ site.data.settings.basic_settings.favicon_image }}">
-	<title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+<!--	&lt;!&ndash; Page Info &ndash;&gt;-->
+<!--	<link rel="shortcut icon" href="{{ site.data.settings.basic_settings.favicon_image }}">-->
+<!--	<title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>-->
+<!--	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">-->
 
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
-	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
-	<meta name="twitter:image:src" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">
+<!--	&lt;!&ndash; Twitter Card &ndash;&gt;-->
+<!--	<meta name="twitter:card" content="summary_large_image">-->
+<!--	<meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">-->
+<!--	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">-->
+<!--	<meta name="twitter:image:src" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">-->
 
-	<!-- Facebook OpenGraph -->
-	<meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}" />
-	<meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}" />
-
+<!--	&lt;!&ndash; Facebook OpenGraph &ndash;&gt;-->
+<!--	<meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />-->
+<!--	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}" />-->
+<!--	<meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}" />-->
+	{% include head.html %}
 	{% if site.data.settings.font_settings.font_embed %}
 	<!-- Font Embed Code -->
 	{{ site.data.settings.font_settings.font_embed }}
