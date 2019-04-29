@@ -1,10 +1,10 @@
 ---
 title: "Installing & Testing Zephir on Vagrant"
 date: 2014-01-18 00:00:00
-excerpt: [Vagrant])(https://www.vagrantup.com) is an excellent tool you can use to create and deploy a linux-based development environment for your applications. In this tutorial, we are going to explain how to set it up for Zephir.
+excerpt: [Vagrant](https://www.vagrantup.com) is an excellent tool you can use to create and deploy a linux-based development environment for your applications. In this tutorial, we are going to explain how to set it up for Zephir.
 ---
 
-[Vagrant])(https://www.vagrantup.com) is an excellent tool you can use to create and deploy a linux-based development environment for your applications. In this tutorial, we are going to explain how to set it up for Zephir.
+[Vagrant](https://www.vagrantup.com) is an excellent tool you can use to create and deploy a linux-based development environment for your applications. In this tutorial, we are going to explain how to set it up for Zephir.
 
 ### Setting up Vagrant
 First of all you need Vagrant installed on your machine, this should be possible without major complications, in any case, check its documentation out if you fall in any trouble.
