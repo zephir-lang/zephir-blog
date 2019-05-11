@@ -75,6 +75,7 @@
 
 .header__content {
 	position: relative;
+	padding-right: 40px;
 
 	@include mq(tabletl) {
 		position: absolute;
