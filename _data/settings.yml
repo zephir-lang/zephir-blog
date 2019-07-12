@@ -154,7 +154,7 @@ font_settings:
     letter_spacing: 0
 
 advanced_settings:
-  ajax_loading: true
+  ajax_loading: false
   analytics_code: ""
   custom_styles: ""
   header_js: "<script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>"
