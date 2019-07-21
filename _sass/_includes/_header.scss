@@ -255,7 +255,7 @@
 .menu__list {
 	list-style: none;
 	margin: 0 auto;
-	padding: 12px 20px;
+	padding: 26px 20px 12px;
 
 	@include mq(tabletp) {
 		padding: 30px 40px;
