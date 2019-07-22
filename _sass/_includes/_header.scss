@@ -255,7 +255,7 @@
 .menu__list {
 	list-style: none;
 	margin: 0 auto;
-	padding: 26px 20px 12px;
+	padding: 32px 20px 12px;
 
 	@include mq(tabletp) {
 		padding: 30px 40px;
@@ -272,7 +272,7 @@
 }
 
 .menu__list__item__link {
-	font-size: $menu-small;
+	font-size: $sitetitle-small;
 	font-weight: $menu-weight;
 	color: rgba($overlay-text-color, 0.7);
 	padding: 10px 0;
