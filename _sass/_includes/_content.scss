@@ -232,8 +232,17 @@
 		margin: 30px auto;
 	}
 
+	@include mq(tabletl) {
+		max-width: 80%;
+	}
+
 	@include mq(laptop) {
 		margin: 40px auto;
+		max-width: 75%;
+	}
+
+	@include mq(desktop) {
+		max-width: 70%;
 	}
 
 	&:first-child {
