@@ -55,6 +55,7 @@ social_settings:
   bandcamp_url: ''
   linkedin_url: ''
   disqus_tag: ''
+  discord_url: 'https://phalcon.link/discord'
 
 color_settings:
   background_color: '#ffffff'
