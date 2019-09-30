@@ -7,6 +7,7 @@ tags:
   - '0.12'
   - release
 ---
+
 We are happy to announce the release of Zephir 0.12.0! 
 
 This release fixes a good number of bugs and offers more optimizations as well as cleanup. The highlights are:
