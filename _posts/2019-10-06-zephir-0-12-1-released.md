@@ -7,6 +7,9 @@ tags:
   - 0.12.1
   - release
 ---
+Zephir 0.12.1 Released
+
+## Changelog
 ### Added
 - Added initial bash completion support (see `zephir-autocomplete` file)
 
