@@ -7,7 +7,7 @@ tags:
   - 0.12.1
   - release
 ---
-Zephir 0.12.1 Released
+New Zephir released
 
 ## Changelog
 ### Added
