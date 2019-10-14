@@ -4,7 +4,7 @@ title: Zephir 0.12.0 Released
 date: 2019-06-20T16:05:03.842Z
 tags:
   - zephir
-  - '0.12'
+  - 0.12.x
   - release
 ---
 
@@ -18,7 +18,7 @@ This release fixes a good number of bugs and offers more optimizations as well a
 
 ## Changelog
 ### Added
-- Added initial support of "use" keyword in closures [#888](https://github.com/phalcon/zephir/issues/888), [#1848](https://github.com/phalcon/zephir/issues/1848)
+- Added initial support of `use` keyword in closures [#888](https://github.com/phalcon/zephir/issues/888), [#1848](https://github.com/phalcon/zephir/issues/1848)
 
 ### Removed
 - PHP 5.x is no longer supported
