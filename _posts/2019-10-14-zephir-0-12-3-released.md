@@ -7,7 +7,7 @@ tags:
   - 0.12.x
   - release
 ---
-The release with C code geneation fixes.
+The release with C code generation fixes.
 
 ### Fixed
 - Fixed concatenation support of strings with double numbers
