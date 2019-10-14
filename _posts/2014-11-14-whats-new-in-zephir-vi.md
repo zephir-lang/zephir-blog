@@ -1,7 +1,8 @@
 ---
-title: "What's New in Zephir (VI)"
-date: 2014-11-14 00:00:00
-excerpt: Last weeks many improvements have been added to Zephir. We have nailed down a concrete list of features and are hard at work on implementing them. Zephir has gone through a long evolution....
+title: What's New in Zephir (VI)
+date: 2014-11-14T00:00:00.000Z
+tags:
+  - news
 ---
 
 Last weeks many improvements have been added to Zephir. We have nailed down a concrete list of features and are hard at work on implementing them. Zephir has gone through a long evolution. If you haven't looked at Zephir in a while, you may be now feel a better and stable version than early alpha versions.
