@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zephir 0.12.8 Released
-date: 2019-10-03T15:34:38.221Z
+date: 2019-10-03T17:34:00.000Z
 tags:
   - zephir
   - 0.12.x
