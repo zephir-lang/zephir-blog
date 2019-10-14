@@ -4,7 +4,7 @@ title: Zephir 0.12.1 Released
 date: 2019-07-30T20:08:00.000Z
 tags:
   - zephir
-  - 0.12.1
+  - 0.12.x
   - release
 ---
 New Zephir released
@@ -20,7 +20,7 @@ New Zephir released
 - Rephrase help strings for common compiler options
 
 ### Removed
-- Remove HAVE_SPL usage
+- Remove `HAVE_SPL` usage
   [phalcon/cphalcon#14215](https://github.com/phalcon/cphalcon/pull/14215)
 - Remove not used redundant command line options
 - Cleaning up redundant CLI options
