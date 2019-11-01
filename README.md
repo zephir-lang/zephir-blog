@@ -12,4 +12,3 @@
 
 # zephir-blog
 
-Zephir Blog
