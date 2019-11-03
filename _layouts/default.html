@@ -31,18 +31,7 @@
 
 
 	{% include footer.html %}
-
-
-	<!-- Javascript Assets -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="{{ site.data.settings.basic_settings.site_baseurl }}/js/journal-min.js"></script>
-
-	<script type="text/javascript"
-					src="https://cdn.jsdelivr.net/g/highlight.js@9.11.0(highlight.min.js+languages/apache.min.js+languages/bash.min.js+languages/css.min.js+languages/dockerfile.min.js+languages/javascript.min.js+languages/json.min.js+languages/nginx.min.js+languages/php.min.js+languages/sql.min.js+languages/twig.min.js+languages/xml.min.js+languages/yaml.min.js+languages/zephir.min.js)"></script>
-	<script>
-			hljs.initHighlightingOnLoad();
-	</script>
-
+	{% include js.html %}
 
 
 </body>
