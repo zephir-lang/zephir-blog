@@ -18,7 +18,7 @@ menu_settings:
     - title: 'About'
       url: '/about'
     - title: 'Documentation'
-        url: 'https://docs.zephir-lang.com/'
+      url: 'https://docs.zephir-lang.com/'
 
 grid_settings:
   grid_spacing: 10
