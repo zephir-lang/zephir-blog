@@ -17,6 +17,8 @@ menu_settings:
       url: '/'
     - title: 'About'
       url: '/about'
+    - title: 'Zephir site'
+      url: 'https://zephir-lang.com/en'
     - title: 'Documentation'
       url: 'https://docs.zephir-lang.com/'
 
