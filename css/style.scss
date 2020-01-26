@@ -143,15 +143,12 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 
 @import "_includes/_content";
 @import "_includes/_socials";
-@import "_includes/_gallery";
 @import "_includes/_syntax";
-@import "_includes/_contact-form";
 
 
 
 // - - - - - - - - - - Section styles
 
-@import "_includes/_portfolio";
 @import "_includes/_blog";
 
 
