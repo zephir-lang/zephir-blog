@@ -11,4 +11,4 @@ A small release with typedef fixes.
 
 ### Removed
 
-* - Removed `zend_uint` typedef usage
+- Removed `zend_uint` typedef usage
