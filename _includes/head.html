@@ -1,111 +1,111 @@
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
-        <meta name="author" content="{{ site.app.author }}">
-        <meta name="generator" content="">
-        <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+    <meta name="author" content="{{ site.app.author }}">
+    <meta name="generator" content="">
+    <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
 
-        <title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
+    <title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
-        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
-        <meta name="twitter:image:src" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+    <meta name="twitter:image:src" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">
 
-        <!-- Facebook -->
-        <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />
-        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}" />
-        <meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}" />
+    <!-- Facebook -->
+    <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}" />
+    <meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}" />
 
-        <link rel="apple-touch-icon-precomposed"
-          sizes="57x57"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="114x114"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="72x72"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="144x144"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="60x60"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="120x120"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="76x76"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon-precomposed"
-          sizes="152x152"
-          href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="https://assets.phalcon.io/zephir/icons/apple-touch-icon-152x152.png">
 
-        <link rel="icon"
-          type="image/png"
-          sizes="196x196"
-          href="https://assets.phalcon.io/zephir/icons/favicon-196x196.png">
-        <link rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="https://assets.phalcon.io/zephir/icons/favicon-96x96.png">
-        <link rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="https://assets.phalcon.io/zephir/icons/favicon-32x32.png">
-        <link rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="https://assets.phalcon.io/zephir/icons/favicon-16x16.png">
-        <link rel="icon"
-          type="image/png"
-          sizes="128x128"
-          href="https://assets.phalcon.io/zephir/icons/favicon-128.png">
-        <link rel="shortcut icon" type="image/png" href="https://assets.phalcon.io/zephir/icons/favicon.ico">
+    <link rel="icon"
+      type="image/png"
+      sizes="196x196"
+      href="https://assets.phalcon.io/zephir/icons/favicon-196x196.png">
+    <link rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://assets.phalcon.io/zephir/icons/favicon-96x96.png">
+    <link rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://assets.phalcon.io/zephir/icons/favicon-32x32.png">
+    <link rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://assets.phalcon.io/zephir/icons/favicon-16x16.png">
+    <link rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="https://assets.phalcon.io/zephir/icons/favicon-128.png">
+    <link rel="shortcut icon" type="image/png" href="https://assets.phalcon.io/zephir/icons/favicon.ico">
 
-        <meta name="msapplication-TileColor"
-          content="#FFFFFF">
-        <meta name="msapplication-TileImage"
-          content="https://assets.phalcon.io/zephir/icons/mstile-144x144.png">
-        <meta name="msapplication-square70x70logo"
-          content="https://assets.phalcon.io/zephir/icons/mstile-70x70.png">
-        <meta name="msapplication-square150x150logo"
-          content="https://assets.phalcon.io/zephir/icons/mstile-150x150.png">
-        <meta name="msapplication-wide310x150logo"
-          content="https://assets.phalcon.io/zephir/icons/mstile-310x150.png">
-        <meta name="msapplication-square310x310logo"
-          content="https://assets.phalcon.io/zephir/icons/mstile-310x310.png">
+    <meta name="msapplication-TileColor"
+      content="#FFFFFF">
+    <meta name="msapplication-TileImage"
+      content="https://assets.phalcon.io/zephir/icons/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo"
+      content="https://assets.phalcon.io/zephir/icons/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo"
+      content="https://assets.phalcon.io/zephir/icons/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo"
+      content="https://assets.phalcon.io/zephir/icons/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo"
+      content="https://assets.phalcon.io/zephir/icons/mstile-310x310.png">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ site.data.settings.basic_settings.site_baseurl }}/css/style.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/g/highlight.js@9.11.0(styles/monokai-sublime.min.css)" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ site.data.settings.basic_settings.site_baseurl }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/g/highlight.js@9.11.0(styles/monokai-sublime.min.css)" />
 
-        <!-- Icons -->
-        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
 
-        {% if site.data.settings.advanced_settings.custom_styles %}
-        <!-- Custom Styles -->
-        <style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
-        {% endif %}
+    {% if site.data.settings.advanced_settings.custom_styles %}
+    <!-- Custom Styles -->
+    <style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
+    {% endif %}
 
-        {% if site.data.settings.advanced_settings.analytics_code %}
-        <!-- Analytics Code -->
-        {{ site.data.settings.advanced_settings.analytics_code }}
-        {% endif %}
-      {% if site.data.settings.font_settings.font_embed %}
-      <!-- Font Embed Code -->
-      {{ site.data.settings.font_settings.font_embed }}
-      {% endif %}
+    {% if site.data.settings.advanced_settings.analytics_code %}
+    <!-- Analytics Code -->
+    {{ site.data.settings.advanced_settings.analytics_code }}
+    {% endif %}
+    {% if site.data.settings.font_settings.font_embed %}
+    <!-- Font Embed Code -->
+    {{ site.data.settings.font_settings.font_embed }}
+    {% endif %}
 
 
-      {% if site.data.settings.advanced_settings.header_js %}
-      <!-- Extra Header JS Code -->
-      {{ site.data.settings.advanced_settings.header_js }}
-      {% endif %}
-    </head>
+    {% if site.data.settings.advanced_settings.header_js %}
+    <!-- Extra Header JS Code -->
+    {{ site.data.settings.advanced_settings.header_js }}
+    {% endif %}
+</head>
