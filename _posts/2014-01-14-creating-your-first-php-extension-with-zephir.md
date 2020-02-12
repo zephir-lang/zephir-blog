@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Creating your first PHP extension with Zephir"
 date: 2014-01-14 00:00:00
 excerpt: This screencast explains how to use Zephir to create your first PHP extension. Check a written explanation for this screencast here

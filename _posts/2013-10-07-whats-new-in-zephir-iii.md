@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "What's New in Zephir (III)"
 date: 2013-09-30 00:00:00
 excerpt: Welcome to the new edition of our `what's new` series. These days, more bugs have been fixed and a number of small improvements have been made...

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Installing & Testing Zephir on Vagrant"
 date: 2014-01-18 00:00:00
 excerpt: Vagrant is an excellent tool you can use to create and deploy a linux-based development environment for your applications. In this tutorial, we are going to explain how to set it up for Zephir.
