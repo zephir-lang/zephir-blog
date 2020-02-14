@@ -4,7 +4,8 @@ title: Zephir 0.12.17 Released
 date: 2020-02-14T11:52:49.206Z
 tags:
   - zephir
-  - 0.12.x release
+  - 0.12.x
+  - release
 ---
 Fixes related to character conversion in `filer.c`.
 
