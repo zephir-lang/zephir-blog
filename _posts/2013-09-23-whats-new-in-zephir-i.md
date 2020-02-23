@@ -2,7 +2,8 @@
 layout: post
 title: "What's New in Zephir (I)"
 date: 2013-09-23 00:00:00
-excerpt: In the last few weeks Zephir has seen a lot of new features, improvements, and bug fixes. In this brief post we're going to highlight some of the most prominent ones...
+tags:
+  - zephir
 ---
 
 In the last few weeks Zephir has seen a lot of new features, improvements, and bug fixes. In this brief post we're going to highlight some of the most prominent ones:

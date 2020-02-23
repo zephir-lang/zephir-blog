@@ -2,7 +2,8 @@
 layout: post
 title: "What's New in Zephir (V)"
 date: 2014-02-13 00:00:00
-excerpt: These last weeks a lot of bugs have been fixed and new exciting features have been added to Zephir. Additionally, the core has been improved by adding namespaces, an autoloader, composer support and adopting PSR2 as coding standard...
+tags:
+  - zephir
 ---
 
 These last weeks a lot of bugs have been fixed and new exciting features have been added to Zephir. Additionally, the core has been improved by adding namespaces, an autoloader, composer support and adopting PSR2 as coding standard. Main features added are highlighted as follows:
