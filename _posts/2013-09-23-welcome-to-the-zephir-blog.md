@@ -2,7 +2,8 @@
 layout: post
 title: 'Welcome to the Zephir Blog'
 date: 2013-09-23 00:00:00
-excerpt: Hi, welcome to the Zephir Language official blog! We plan to share articles, tutorials and tips from the community and the Zephir developers.
+tags:
+  - zephir
 ---
 
 Hi, welcome to the Zephir Language official blog! 

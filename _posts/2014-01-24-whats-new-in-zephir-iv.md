@@ -2,7 +2,8 @@
 layout: post
 title: "What's New in Zephir (IV)"
 date: 2014-01-24 00:00:00
-excerpt: This is our first post from the `What's New in Zephir` series after Zephir v0.3.0 was released and we have great improvements to share with you. Bitwise Operators...
+tags:
+  - zephir
 ---
 
 This is our first post from the `What's New in Zephir` series after Zephir v0.3.0 was released and we have great improvements to share with you.
