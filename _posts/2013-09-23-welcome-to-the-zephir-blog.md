@@ -4,6 +4,9 @@ title: 'Welcome to the Zephir Blog'
 date: 2013-09-23 00:00:00
 tags:
   - zephir
+  - blog
+  - welcome
+  - tutorials
 ---
 
 Hi, welcome to the Zephir Language official blog! 
