@@ -4,6 +4,8 @@ title: "What's New in Zephir (II)"
 date: 2013-09-30 00:00:00
 tags:
   - zephir
+  - shortcuts
+  - docs
 ---
 
 Zephir development has been progressing at a steady pace and there are quite a few new things we're going to have a look at today.
