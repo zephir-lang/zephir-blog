@@ -12,3 +12,5 @@
 
 # zephir-blog
 
+This is the official blog source code. The blog is leveraging Jekyll and is deployed to [Netlify](https://app.netlify.com)
+
