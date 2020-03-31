@@ -324,6 +324,9 @@
 	}
 
 	.socials__item__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background: rgba($overlay-text-color, 0.7);
 		color: $overlay-background-color;
 
