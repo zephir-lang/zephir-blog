@@ -41,6 +41,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0;
+	background-image: url("/images/demo/demo-portrait.jpg") !important;
 	@include transition(opacity 0.4s ease-in-out);
 
 	@include mq(tabletl) {
