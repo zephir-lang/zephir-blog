@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What's New in Zephir (III)"
+title: What's New in Zephir (III)
 date: 2013-09-30 00:00:00
 tags:
   - zephir

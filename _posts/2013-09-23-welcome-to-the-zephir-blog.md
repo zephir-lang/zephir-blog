@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Welcome to the Zephir Blog'
+title: Welcome to the Zephir Blog
 date: 2013-09-23 00:00:00
 tags:
   - zephir
