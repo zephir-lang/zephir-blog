@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What's New in Zephir (VI)"
+title: What's New in Zephir (VI)
 date: 2014-11-14 00:00:00
 tags:
   - zephir
