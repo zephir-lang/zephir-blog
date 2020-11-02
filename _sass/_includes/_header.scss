@@ -162,6 +162,8 @@
 .menu__toggle {
 	position: absolute;
 	z-index: 100;
+	width: 30px;
+	height: 30px;
 	top: 5px;
 	right: 0;
 	cursor: pointer;
@@ -174,55 +176,52 @@
 }
 
 .menu__toggle__icon {
-	float: right;
-	position: relative;
-	width: 24px;
-	height: 20px;
-	margin-left: 8px;
-
-	span, span:before, span:after {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+	transition-duration: 75ms;
+	background-color: #fff;
+	&:before {
 		content: '';
 		position: absolute;
-		top: 8px;
-		left: 0;
 		width: 100%;
-		height: 3px;
-		@include transition(all 0.1s);
-		background: rgba($overlay-text-color, 0.7);
+		height: 5px;
+		left: 0;
+		background-color: #fff;
+		transition: top 75ms ease .12s,opacity 75ms ease;
+		top: -10px;
 	}
-
-	span:before {
-		top: -8px;
-	}
-
-	span:after {
-		top: 8px;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 5px;
+		left: 0;
+		background-color: #fff;
+		transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+		bottom: -10px;
 	}
 }
 
-.menu--open .menu__toggle__icon {
-
-	span:before, span:after {
-		background: $overlay-text-color !important;
-	}
-		
-	span {
-		background-color: transparent !important;
-	}
-	
-	span:before,
-	span:after {
+.menu__toggle__icon.active {
+	transition-delay: .12s;
+	transition-timing-function: cubic-bezier(.215,.61,.355,1);
+	transform: rotate(45deg);
+	&:before {
 		top: 0;
+		transition: top 75ms ease,opacity 75ms ease .12s;
+		opacity: 0;
 	}
-	
-	span:before {
-		@include rotate(45);
-	}
-
-	span:after {
-		@include rotate(-45);
+	&:after {
+		bottom: 0;
+		transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+		transform: rotate(-90deg);
 	}
 }
+
 
 .menu__wrap {
 	position: fixed;
