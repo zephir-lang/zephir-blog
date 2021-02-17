@@ -11,7 +11,7 @@ Provide an ability to declare module dependencies.
 
 ### Added
 - Introduced initial ability to generate `zend_module_deps`
-  [#1900](https://github.com/phalcon/zephir/pull/1900),
+  [#1900](https://github.com/zephir-lang/zephir/pull/1900),
   [phalcon/cphalcon#13702](https://github.com/phalcon/cphalcon/issues/13702),
   [phalcon/cphalcon#13794](https://github.com/phalcon/cphalcon/pull/13794)
 

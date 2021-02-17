@@ -11,8 +11,8 @@ Fixes related to character conversion in `filer.c`.
 
 ### Fixed
 - On some platforms special alpha characters aren't correctly escaped
-  [#2058](https://github.com/phalcon/zephir/pull/2058)
+  [#2058](https://github.com/zephir-lang/zephir/pull/2058)
 
 ### Changed
 - Changed the internal DI environment mode when compile PHAR
-  [#2049](https://github.com/phalcon/zephir/pull/2049)
+  [#2049](https://github.com/zephir-lang/zephir/pull/2049)

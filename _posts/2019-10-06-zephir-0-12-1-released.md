@@ -15,8 +15,8 @@ New Zephir released
 
 ### Changed
 - Use local memory management
-  [#1859](https://github.com/phalcon/zephir/pull/1859),
-  [#1880](https://github.com/phalcon/zephir/pull/1880)
+  [#1859](https://github.com/zephir-lang/zephir/pull/1859),
+  [#1880](https://github.com/zephir-lang/zephir/pull/1880)
 - Rephrase help strings for common compiler options
 
 ### Removed
@@ -27,10 +27,10 @@ New Zephir released
 
 ### Fixed
 - Fixed segfault when auto-loading class with syntax error
-  [#1885](https://github.com/phalcon/zephir/issues/1885)
-- Optimize memory usage [#1882](https://github.com/phalcon/zephir/pull/1882)
+  [#1885](https://github.com/zephir-lang/zephir/issues/1885)
+- Optimize memory usage [#1882](https://github.com/zephir-lang/zephir/pull/1882)
 - Fixed modifying array values in loops
-  [#1879](https://github.com/phalcon/zephir/issues/1879)
+  [#1879](https://github.com/zephir-lang/zephir/issues/1879)
 
 Big thank you to all of our contributors
 

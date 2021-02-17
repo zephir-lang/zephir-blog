@@ -14,8 +14,8 @@ Fixed scope related issues and improved stubs generation.
   [ice/framework#266](https://github.com/ice/framework/pull/266)
 - Fixed initialization of object properties with default values when
   the object is an instance of a child class
-  [#2089](https://github.com/phalcon/zephir/issues/2089)
+  [#2089](https://github.com/zephir-lang/zephir/issues/2089)
 
 ### Changed
 - Improved stubs generation for methods which may return object or null
-  [#2092](https://github.com/phalcon/zephir/issues/2092)
+  [#2092](https://github.com/zephir-lang/zephir/issues/2092)
