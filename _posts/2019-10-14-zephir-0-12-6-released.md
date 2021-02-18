@@ -10,4 +10,4 @@ tags:
 A small release with regressions fixes.
 
 - Fixed regression introduced in `0.12.5` for those users who doesn't use
-  bundled `ext/json/php_json.h` [#1940](https://github.com/phalcon/zephir/issues/1940)
+  bundled `ext/json/php_json.h` [#1940](https://github.com/zephir-lang/zephir/issues/1940)

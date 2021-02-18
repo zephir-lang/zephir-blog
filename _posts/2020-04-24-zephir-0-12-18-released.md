@@ -11,10 +11,10 @@ Fixed scope related issues.
 
 ### Fixed
 - In some cases for C "control characters" aren't properly escaped
-  [#2065](https://github.com/phalcon/zephir/issues/2065)
+  [#2065](https://github.com/zephir-lang/zephir/issues/2065)
 - Zephir ignored property visibility and has not thrown error when setting
   private/protected properties in scope that shouldn't intended for it
-  [#2078](https://github.com/phalcon/zephir/pull/2078),
+  [#2078](https://github.com/zephir-lang/zephir/pull/2078),
   [phalcon/cphalcon#14810](https://github.com/phalcon/cphalcon/issues/14810),
   [phalcon/cphalcon#14766](https://github.com/phalcon/cphalcon/issues/14766)
 

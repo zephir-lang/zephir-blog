@@ -37,7 +37,7 @@ If you are working on any other debian-based distribution these instructions als
 Clone the repository and run the installer is enough to get Zephir running:
 
 ```sh
-$ git clone https://github.com/phalcon/zephir
+$ git clone https://github.com/zephir-lang/zephir
 $ cd zephir
 $ ./install -c
 $ cd .. 
