@@ -21,6 +21,8 @@ menu_settings:
       url: 'https://zephir-lang.com/en'
     - title: 'Documentation'
       url: 'https://docs.zephir-lang.com/'
+    - title: 'Discussions'
+      url: 'https://github.com/zephir-lang/zephir/discussions'
 
 grid_settings:
   grid_spacing: 10
