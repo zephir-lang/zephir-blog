@@ -5,334 +5,335 @@
 // - - - - - - - - - - - - - - - - - -
 
 
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Header
 
 .header {
-	padding: 40px 20px;
+  padding: 40px 20px;
 
-	@include mq(tabletp) {
-		padding: 80px 40px;
-	}
+  @include mq(tabletp) {
+    padding: 80px 40px;
+  }
 
-	@include mq(tabletl) {
-		position: fixed;
-		z-index: 10;
-		overflow: auto;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 30%;
-		padding: 0;
-	}
+  @include mq(tabletl) {
+    position: fixed;
+    z-index: 10;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    padding: 0;
+  }
 
-	@include mq(desktop) {
-		width: 25%;
-	}
+  @include mq(desktop) {
+    width: 25%;
+  }
 }
 
 .header-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	opacity: 0;
-	background-image: url("/images/demo/demo-portrait.jpg") !important;
-	@include transition(opacity 0.4s ease-in-out);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  background-image: url("/images/demo/demo-portrait.jpg") !important;
+  @include transition(opacity 0.4s ease-in-out);
 
-	@include mq(tabletl) {
-		position: fixed;
-		right: auto;
-		width: 30%;
-	}
+  @include mq(tabletl) {
+    position: fixed;
+    right: auto;
+    width: 30%;
+  }
 
-	@include mq(desktop) {
-		width: 25%;
-	}
+  @include mq(desktop) {
+    width: 25%;
+  }
 }
 
 .header-image--on {
-	opacity: 1;
+  opacity: 1;
 }
 
 .header-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: rgba($overlay-background-color, $overlay-opacity);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba($overlay-background-color, $overlay-opacity);
 
-	@include mq(tabletl) {
-		background: -moz-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
-		background: -webkit-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
-		background: linear-gradient(to bottom, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
-	}
+  @include mq(tabletl) {
+    background: -moz-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
+    background: -webkit-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
+    background: linear-gradient(to bottom, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
+  }
 }
 
 .header__content {
-	position: relative;
-	padding-right: 40px;
+  position: relative;
+  padding-right: 40px;
 
-	@include mq(tabletl) {
-		position: absolute;
-		bottom: 0;
-		padding: 40px 40px 34px;
-	}
+  @include mq(tabletl) {
+    position: absolute;
+    bottom: 0;
+    padding: 40px 40px 34px;
+  }
 
-	@include mq(laptop) {
-		padding: 60px 60px 52px;
-	}
+  @include mq(laptop) {
+    padding: 60px 60px 52px;
+  }
 }
 
 .header__logo {
-	display: block;
-	width: $logo-width;
-	max-width: 80%;
+  display: block;
+  width: $logo-width;
+  max-width: 80%;
 
-	@include mq(tabletp) {
-		float: left;
-		max-width: 50%;
-	}
+  @include mq(tabletp) {
+    float: left;
+    max-width: 50%;
+  }
 }
 
 .header__logo__img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .header__title {
-	font-family: $title-font;
-	font-size: $sitetitle-small;
-	font-weight: $sitetitle-weight;
-	letter-spacing: $sitetitle-spacing;
-	line-height: 1;
-	color: $overlay-text-color;
+  font-family: $title-font;
+  font-size: $sitetitle-small;
+  font-weight: $sitetitle-weight;
+  letter-spacing: $sitetitle-spacing;
+  line-height: 1;
+  color: $overlay-text-color;
 
-	&:hover {
-		color: $overlay-text-color;
-	}
+  &:hover {
+    color: $overlay-text-color;
+  }
 
-	@include mq(tabletp) {
-		font-size: $sitetitle-medium;
-	}
+  @include mq(tabletp) {
+    font-size: $sitetitle-medium;
+  }
 
-	@include mq(laptop) {
-		font-size: $sitetitle-large;
-	}
+  @include mq(laptop) {
+    font-size: $sitetitle-large;
+  }
 }
 
 .header__tagline {
-	margin-top: 10px;
-	font-family: $body-font;
-	font-size: $sitetagline-small;
-	font-weight: $sitetagline-weight;
-	letter-spacing: $sitetagline-spacing;
-	line-height: $sitetagline-lineheight;
-	color: rgba($overlay-text-color, 0.7);
+  margin-top: 10px;
+  font-family: $body-font;
+  font-size: $sitetagline-small;
+  font-weight: $sitetagline-weight;
+  letter-spacing: $sitetagline-spacing;
+  line-height: $sitetagline-lineheight;
+  color: rgba($overlay-text-color, 0.7);
 
-	@include mq(tabletp) {
-		font-size: $sitetagline-medium;
-	}
+  @include mq(tabletp) {
+    font-size: $sitetagline-medium;
+  }
 
-	@include mq(laptop) {
-		font-size: $sitetagline-large;
-	}
+  @include mq(laptop) {
+    font-size: $sitetagline-large;
+  }
 }
-
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu
 
 .menu {
-	
-	@include mq(tabletl) {
-		margin-top: 20px;
-	}
 
-	@include mq(laptop) {
-		margin-top: 30px;
-	}
+  @include mq(tabletl) {
+    margin-top: 20px;
+  }
+
+  @include mq(laptop) {
+    margin-top: 30px;
+  }
 }
 
 .menu__toggle {
-	position: absolute;
-	z-index: 100;
-	width: 30px;
-	height: 30px;
-	top: 5px;
-	right: 0;
-	cursor: pointer;
-	font-size: 15px;
-	line-height: 20px;
-	
-	@include mq(tabletl) {
-		display: none;
-	}
+  position: absolute;
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  right: 0;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 20px;
+
+  @include mq(tabletl) {
+    display: none;
+  }
 }
 
 .menu__toggle__icon {
-	position: absolute;
-	top: 15px;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	transition-timing-function: cubic-bezier(.55,.055,.675,.19);
-	transition-duration: 75ms;
-	background-color: #fff;
-	&:before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 5px;
-		left: 0;
-		background-color: #fff;
-		transition: top 75ms ease .12s,opacity 75ms ease;
-		top: -10px;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 5px;
-		left: 0;
-		background-color: #fff;
-		transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
-		bottom: -10px;
-	}
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+  transition-duration: 75ms;
+  background-color: #fff;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    background-color: #fff;
+    transition: top 75ms ease .12s, opacity 75ms ease;
+    top: -10px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    background-color: #fff;
+    transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
+    bottom: -10px;
+  }
 }
 
 .menu__toggle__icon.active {
-	transition-delay: .12s;
-	transition-timing-function: cubic-bezier(.215,.61,.355,1);
-	transform: rotate(45deg);
-	&:before {
-		top: 0;
-		transition: top 75ms ease,opacity 75ms ease .12s;
-		opacity: 0;
-	}
-	&:after {
-		bottom: 0;
-		transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
-		transform: rotate(-90deg);
-	}
+  transition-delay: .12s;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+  transform: rotate(45deg);
+
+  &:before {
+    top: 0;
+    transition: top 75ms ease, opacity 75ms ease .12s;
+    opacity: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
+    transform: rotate(-90deg);
+  }
 }
 
 
 .menu__wrap {
-	position: fixed;
-	z-index: 90;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba($overlay-background-color,0.95);
-	overflow: auto;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($overlay-background-color, 0.95);
+  overflow: auto;
 
-	visibility: hidden;
-	opacity: 0;
-	@include transition(all 0.2s ease-in-out);
+  visibility: hidden;
+  opacity: 0;
+  @include transition(all 0.2s ease-in-out);
 
-	@include mq(tabletl) {
-		position: relative;
-		background: transparent;
-		visibility: visible;
-		overflow: visible;
-		opacity: 1;
-		@include transition(none);
-	}
+  @include mq(tabletl) {
+    position: relative;
+    background: transparent;
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    @include transition(none);
+  }
 }
 
 .menu--open .menu__wrap {
-	visibility: visible;
-	opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .menu__list {
-	list-style: none;
-	margin: 0 auto;
-	padding: 32px 20px 12px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 32px 20px 12px;
 
-	@include mq(tabletp) {
-		padding: 74px 40px 30px;
-	}
+  @include mq(tabletp) {
+    padding: 74px 40px 30px;
+  }
 
-	@include mq(tabletl) {
-		margin: 0;
-		padding: 0;
-	}
+  @include mq(tabletl) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .menu__list__item__link {
-	font-size: $sitetitle-small;
-	font-weight: $menu-weight;
-	color: rgba($overlay-text-color, 0.7);
-	padding: 10px 0;
+  font-size: $sitetitle-small;
+  font-weight: $menu-weight;
+  color: rgba($overlay-text-color, 0.7);
+  padding: 10px 0;
 
-	&:hover {
-		color: $overlay-text-color;
-	}
+  &:hover {
+    color: $overlay-text-color;
+  }
 
-	@include mq(tabletl) {
-		padding: 0;
-		font-size: $menu-medium;
-	}
+  @include mq(tabletl) {
+    padding: 0;
+    font-size: $menu-medium;
+  }
 
-	@include mq(laptop) {
-		font-size: $menu-large;
-	}
-	
-	&.active-link {
-		color: $overlay-text-color;
-	}
+  @include mq(laptop) {
+    font-size: $menu-large;
+  }
+
+  &.active-link {
+    color: $overlay-text-color;
+  }
 }
 
 .menu__button {
-	margin-top: 15px;
-	padding: 15px 20px 16px;
-	font-size: 13px;
+  margin-top: 15px;
+  padding: 15px 20px 16px;
+  font-size: 13px;
 
-	@include mq(tabletl) {
-		margin-top: 0;
-		padding: 12px 20px;
-		font-size: 15px;
-	}
+  @include mq(tabletl) {
+    margin-top: 0;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
 }
-
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Socials
 
 .header .socials {
-	padding: 12px 20px;
+  padding: 12px 20px;
 
-	@include mq(tabletp) {
-		padding: 10px 40px;
-	}
+  @include mq(tabletp) {
+    padding: 10px 40px;
+  }
 
-	@include mq(tabletl) {
-		margin: 27px 0 0;
-		padding: 0;
-	}
+  @include mq(tabletl) {
+    margin: 27px 0 0;
+    padding: 0;
+  }
 
-	@include mq(laptop) {
-		margin-top: 35px;
-	}
+  @include mq(laptop) {
+    margin-top: 35px;
+  }
 
-	.socials__item__link {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba($overlay-text-color, 0.7);
-		color: $overlay-background-color;
+  .socials__item__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($overlay-text-color, 0.7);
+    color: $overlay-background-color;
 
-		&:hover {
-			background: $overlay-text-color;
-			color: $overlay-background-color;
-		}
-	}
+    &:hover {
+      background: $overlay-text-color;
+      color: $overlay-background-color;
+    }
+  }
 }
