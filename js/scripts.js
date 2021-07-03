@@ -10,9 +10,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 // ImagesLoaded
 !function(e,t){"function"==typeof define&&define.amd?define("ev-emitter/ev-emitter",t):"object"==typeof module&&module.exports?module.exports=t():e.EvEmitter=t()}("undefined"!=typeof window?window:this,function(){function e(){}var t=e.prototype;return t.on=function(e,t){if(e&&t){var i=this._events=this._events||{},n=i[e]=i[e]||[];return-1==n.indexOf(t)&&n.push(t),this}},t.once=function(e,t){if(e&&t){this.on(e,t);var i=this._onceEvents=this._onceEvents||{},n=i[e]=i[e]||{};return n[t]=!0,this}},t.off=function(e,t){var i=this._events&&this._events[e];if(i&&i.length){var n=i.indexOf(t);return-1!=n&&i.splice(n,1),this}},t.emitEvent=function(e,t){var i=this._events&&this._events[e];if(i&&i.length){var n=0,o=i[n];t=t||[];for(var r=this._onceEvents&&this._onceEvents[e];o;){var s=r&&r[o];s&&(this.off(e,o),delete r[o]),o.apply(this,t),n+=s?0:1,o=i[n]}return this}},t.allOff=t.removeAllListeners=function(){delete this._events,delete this._onceEvents},e}),function(e,t){"use strict";"function"==typeof define&&define.amd?define(["ev-emitter/ev-emitter"],function(i){return t(e,i)}):"object"==typeof module&&module.exports?module.exports=t(e,require("ev-emitter")):e.imagesLoaded=t(e,e.EvEmitter)}("undefined"!=typeof window?window:this,function(e,t){function i(e,t){for(var i in t)e[i]=t[i];return e}function n(e){var t=[];if(Array.isArray(e))t=e;else if("number"==typeof e.length)for(var i=0;i<e.length;i++)t.push(e[i]);else t.push(e);return t}function o(e,t,r){return this instanceof o?("string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=n(e),this.options=i({},this.options),"function"==typeof t?r=t:i(this.options,t),r&&this.on("always",r),this.getImages(),h&&(this.jqDeferred=new h.Deferred),void setTimeout(function(){this.check()}.bind(this))):new o(e,t,r)}function r(e){this.img=e}function s(e,t){this.url=e,this.element=t,this.img=new Image}var h=e.jQuery,a=e.console;o.prototype=Object.create(t.prototype),o.prototype.options={},o.prototype.getImages=function(){this.images=[],this.elements.forEach(this.addElementImages,this)},o.prototype.addElementImages=function(e){"IMG"==e.nodeName&&this.addImage(e),this.options.background===!0&&this.addElementBackgroundImages(e);var t=e.nodeType;if(t&&d[t]){for(var i=e.querySelectorAll("img"),n=0;n<i.length;n++){var o=i[n];this.addImage(o)}if("string"==typeof this.options.background){var r=e.querySelectorAll(this.options.background);for(n=0;n<r.length;n++){var s=r[n];this.addElementBackgroundImages(s)}}}};var d={1:!0,9:!0,11:!0};return o.prototype.addElementBackgroundImages=function(e){var t=getComputedStyle(e);if(t)for(var i=/url\((['"])?(.*?)\1\)/gi,n=i.exec(t.backgroundImage);null!==n;){var o=n&&n[2];o&&this.addBackground(o,e),n=i.exec(t.backgroundImage)}},o.prototype.addImage=function(e){var t=new r(e);this.images.push(t)},o.prototype.addBackground=function(e,t){var i=new s(e,t);this.images.push(i)},o.prototype.check=function(){function e(e,i,n){setTimeout(function(){t.progress(e,i,n)})}var t=this;return this.progressedCount=0,this.hasAnyBroken=!1,this.images.length?void this.images.forEach(function(t){t.once("progress",e),t.check()}):void this.complete()},o.prototype.progress=function(e,t,i){this.progressedCount++,this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded,this.emitEvent("progress",[this,e,t]),this.jqDeferred&&this.jqDeferred.notify&&this.jqDeferred.notify(this,e),this.progressedCount==this.images.length&&this.complete(),this.options.debug&&a&&a.log("progress: "+i,e,t)},o.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";if(this.isComplete=!0,this.emitEvent(e,[this]),this.emitEvent("always",[this]),this.jqDeferred){var t=this.hasAnyBroken?"reject":"resolve";this.jqDeferred[t](this)}},r.prototype=Object.create(t.prototype),r.prototype.check=function(){var e=this.getIsImageComplete();return e?void this.confirm(0!==this.img.naturalWidth,"naturalWidth"):(this.proxyImage=new Image,this.proxyImage.addEventListener("load",this),this.proxyImage.addEventListener("error",this),this.img.addEventListener("load",this),this.img.addEventListener("error",this),void(this.proxyImage.src=this.img.src))},r.prototype.getIsImageComplete=function(){return this.img.complete&&void 0!==this.img.naturalWidth},r.prototype.confirm=function(e,t){this.isLoaded=e,this.emitEvent("progress",[this,this.img,t])},r.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},r.prototype.onload=function(){this.confirm(!0,"onload"),this.unbindEvents()},r.prototype.onerror=function(){this.confirm(!1,"onerror"),this.unbindEvents()},r.prototype.unbindEvents=function(){this.proxyImage.removeEventListener("load",this),this.proxyImage.removeEventListener("error",this),this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype=Object.create(r.prototype),s.prototype.check=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.url;var e=this.getIsImageComplete();e&&(this.confirm(0!==this.img.naturalWidth,"naturalWidth"),this.unbindEvents())},s.prototype.unbindEvents=function(){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype.confirm=function(e,t){this.isLoaded=e,this.emitEvent("progress",[this,this.element,t])},o.makeJQueryPlugin=function(t){t=t||e.jQuery,t&&(h=t,h.fn.imagesLoaded=function(e,t){var i=new o(this,e,t);return i.jqDeferred.promise(h(this))})},o.makeJQueryPlugin(),o});
 
+
 (function ($) {
   'use strict';
-
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Navigation
@@ -24,7 +24,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   var featuredImage = $('.page__content').attr('data-image');
 
   // State change event
-  History.Adapter.bind(window,'statechange',function(){
+  History.Adapter.bind(window, 'statechange', function () {
     var state = History.getState();
     // console.log(state);
 
@@ -32,16 +32,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     $('body').addClass('loading');
 
     // Load the page
-    $('.page-loader').load( state.hash + ' .page__content', function() {
+    $('.page-loader').load(state.hash + ' .page__content', function () {
 
       // Find transition time
       var transitionTime = 400;
 
       // After current content fades out
-      setTimeout( function() {
+      setTimeout(function () {
 
         // Scroll to top
-        $( 'body, html' ).animate({
+        $('body, html').animate({
           scrollTop: 0
         }, 0);
 
@@ -68,7 +68,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         pageFunctions();
 
         // If it's not the same as the current image
-        if ( newFeaturedImage !== featuredImage ) {
+        if (newFeaturedImage !== featuredImage) {
 
           // Update featured image variable
           featuredImage = newFeaturedImage;
@@ -77,7 +77,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           $('.header-image:not(.header-image--on)').css('background-image', 'url(' + featuredImage + ')');
           $('.header-image:not(.header-image--on)').addClass('header-image--switch');
 
-          $('.header-image--switch').imagesLoaded( { background: true }, function() {
+          $('.header-image--switch').imagesLoaded({background: true}, function () {
             $('.header-image--on').removeClass('header-image--on');
             $('.header-image--switch').addClass('header-image--on');
             $('.header-image--switch').removeClass('header-image--switch');
@@ -93,9 +93,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   // On clicking a link
 
-  if ( $('body').hasClass('ajax-loading') ) {
+  if ($('body').hasClass('ajax-loading')) {
 
-    $(document).on('click', 'a', function (event){
+    $(document).on('click', 'a', function (event) {
 
       // Don't follow link
       event.preventDefault();
@@ -104,7 +104,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       var thisTarget = $(this).attr('href');
 
       // If link is external
-      if ( thisTarget.indexOf('http') >= 0 ) {
+      if (thisTarget.indexOf('http') >= 0) {
 
         // Go to the external link
         window.open(thisTarget, '_blank');
@@ -112,26 +112,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }
 
       // If we don't want to use ajax
-      else if ( $(this).hasClass('js-no-ajax') ) {
+      else if ($(this).hasClass('js-no-ajax')) {
 
         // Use the given link
         window.location = thisTarget;
       }
 
       // if it's a contact modal
-      else if ( $(this).hasClass('js-contact') ) {
+      else if ($(this).hasClass('js-contact')) {
 
         // Open contact modal
         $('.modal--contact').addClass('modal--on');
-      }
-
-      else if ( $(this).hasClass('js-signup') ) {
+      } else if ($(this).hasClass('js-signup')) {
         // Open signup modal
         $('.modal--signup').addClass('modal--on');
       }
 
       // If link is handled by some JS action – e.g. fluidbox
-      else if ( $(this).is('.gallery__item__link') ) {
+      else if ($(this).is('.gallery__item__link')) {
 
         // Let JS handle it
       }
@@ -151,8 +149,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   }
 
 
-
-
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page load
 
   function pageFunctions() {
@@ -161,7 +157,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
 
     // Wait until first image has loaded
-    $('.header-image').imagesLoaded( { background: true }, function() {
+    $('.header-image').imagesLoaded({background: true}, function () {
 
       // Show the content
       $('body').removeClass('loading');
@@ -171,13 +167,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     });
 
 
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Active links
 
     // Switch active link states
     $('.active-link').removeClass('active-link');
     $('a[href="' + navTarget + '"]').addClass('active-link');
-
 
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Galleries
@@ -189,11 +183,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var galleryCount = 0;
 
 
-
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Images
 
-    $('.single p > img').each( function() {
+    $('.single p > img').each(function () {
       var thisP = $(this).parent('p');
       $(this).insertAfter(thisP);
       $(this).wrapAll('<div class="image-wrap"></div>');
@@ -201,18 +193,17 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     });
 
 
-
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Videos
 
     // For each iframe
-    $('.single iframe').each( function() {
+    $('.single iframe').each(function () {
 
       // If it's YouTube or Vimeo
-      if ( $(this).attr('src').indexOf('youtube') >= 0 || $(this).attr('src').indexOf('vimeo') >= 0 ) {
+      if ($(this).attr('src').indexOf('youtube') >= 0 || $(this).attr('src').indexOf('vimeo') >= 0) {
 
         var width = $(this).attr('width');
         var height = $(this).attr('height');
-        var ratio = (height/width)*100;
+        var ratio = (height / width) * 100;
 
         // Wrap in video container
         $(this).wrapAll('<div class="video-wrap"><div class="video" style="padding-bottom:' + ratio + '%;"></div></div>');
@@ -229,10 +220,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu
 
-  $(document).on('click', '.js-menu-toggle', function (){
+  $(document).on('click', '.js-menu-toggle', function () {
 
     // If already open
-    if ( $('body').hasClass('menu--open') ) {
+    if ($('body').hasClass('menu--open')) {
       $('body').removeClass('menu--open');
     }
 
@@ -242,10 +233,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
   });
 
-  $(document).on('click', '.menu__list__item__link', function (){
+  $(document).on('click', '.menu__list__item__link', function () {
 
     // If menu is open when you click a link on mobile
-    if ( $('.menu').hasClass('menu--open') ) {
+    if ($('.menu').hasClass('menu--open')) {
       $('.menu').removeClass('menu--open');
     }
   });
