@@ -234,7 +234,6 @@
   left: 0;
   background: rgba($overlay-background-color, 0.95);
   overflow: auto;
-
   visibility: hidden;
   opacity: 0;
   @include transition(all 0.2s ease-in-out);

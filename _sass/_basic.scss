@@ -432,10 +432,6 @@ section {
   @include mq(tabletl) {
     padding: 0;
   }
-
-  @include mq(laptop) {
-
-  }
 }
 
 .menu--open {
