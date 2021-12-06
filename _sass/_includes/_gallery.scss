@@ -13,10 +13,6 @@
     margin: 30px auto;
   }
 
-  @include mq(tabletl) {
-
-  }
-
   @include mq(laptop) {
     margin: 40px auto;
   }

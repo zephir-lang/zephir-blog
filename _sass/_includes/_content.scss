@@ -69,9 +69,6 @@
     margin-left: auto;
     margin-right: auto;
 
-    @include mq(tabletp) {
-    }
-
     @include mq(tabletl) {
       max-width: 80%;
     }
