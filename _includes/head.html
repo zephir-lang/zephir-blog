@@ -2,23 +2,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+    <meta name="description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
     <meta name="author" content="{{ site.app.author }}">
     <meta name="generator" content="">
     <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
 
-    <title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
+    <title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{
+        page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
-    <meta name="twitter:image:src" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">
+    <meta name="twitter:title" content="{% if page.url == "
+    /" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{
+    site.data.settings.basic_settings.site_title }}{% endif %}">
+    <meta name="twitter:description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
+    <meta name="twitter:image:src"
+          content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}">
 
     <!-- Facebook -->
-    <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}" />
-    <meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}" />
+    <meta property="og:title" content="{% if page.url == "
+    /" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{
+    site.data.settings.basic_settings.site_title }}{% endif %}" />
+    <meta property="og:description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}"/>
+    <meta property="og:image" content="{{ site.data.settings.basic_settings.site_baseurl }}{{ page.featured_image }}"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,17 +41,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://assets.phalcon.io/zephir/favicons/favicon.ico"/>
     <link rel="manifest" href="/images/favicons/site.webmanifest">
     <link rel="mask-icon" href="https://assets.phalcon.io/zephir/favicons/safari-pinned-tab.svg" color="#A2DED0">
-    <meta name="msapplication-config" content="https://assets.phalcon.io/zephir/favicons/browserconfig.xml" />
+    <meta name="msapplication-config" content="https://assets.phalcon.io/zephir/favicons/browserconfig.xml"/>
     <meta name="msapplication-TileColor" content="#2e8470">
     <meta name="theme-color" content="#2e8470">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ site.data.settings.basic_settings.site_baseurl }}/css/style.css">
 
-<!--    {% if site.data.settings.advanced_settings.analytics_code %}-->
-<!--    &lt;!&ndash; Analytics Code &ndash;&gt;-->
-<!--    {{ site.data.settings.advanced_settings.analytics_code }}-->
-<!--    {% endif %}-->
+    <!--    {% if site.data.settings.advanced_settings.analytics_code %}-->
+    <!--    &lt;!&ndash; Analytics Code &ndash;&gt;-->
+    <!--    {{ site.data.settings.advanced_settings.analytics_code }}-->
+    <!--    {% endif %}-->
 
 
     {% if site.data.settings.advanced_settings.header_js %}
